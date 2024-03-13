@@ -1,38 +1,77 @@
-.App {
+* {
+  justify-content: center;
+  align-items: center;
+  background-color: #201b1b;
+  padding-top: 2vh;
+  
+  
+}
+
+.table-container {
+  max-width: 90%; /* Se ajusta al 90% del ancho de la pantalla */
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #b93a3a;
+  border-radius: 8px;
+  background-color: #201b1b;
+  position: relative;
+  
+}
+
+.select-records {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #b93a3a;
+  border-radius: 4px;
+  background-color: #201b1b;
+  margin-top: 20px;
+  margin-left: 2%; /* Margen izquierdo del 2% del ancho de la pantalla */
+  width: 20%; /* Ancho del 20% del contenedor padre */
+}
+
+.search-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #c2c2c2;
+  border-radius: 4px;
+  background-color: #201b1b;
+  margin-top: 20px;
+  margin-right: 2%; /* Margen derecho del 2% del ancho de la pantalla */
+  width: 20%; /* Ancho del 20% del contenedor padre */
+  max-width: 150px; /* Ancho máximo de 150px */
+}
+
+.data-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding-top: 4vh;
+}
+
+.records-info {
+  margin-top: 20px;
+  font-size: 16px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Consulta de medios para ajustar el tamaño del selector y el campo de búsqueda en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .select-records,
+  .search-input {
+    width: 100%; /* Utiliza el 100% del ancho del contenedor padre en pantallas pequeñas */
+    margin: 10px 0; /* Añade un pequeño margen superior e inferior */
   }
 }
